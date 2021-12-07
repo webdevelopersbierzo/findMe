@@ -7,17 +7,17 @@ class CandidateSchema extends Schema {
   up () {
     this.create('candidates', (table) => {
       table.increments('candidateId')
-      table.string('namefull',100),notNullable()
-      table.string('email', 254).notNullable().unique()
-      table.string('telefono', 254).notNullable()
-      table.timestamps('nacimiento',{useTz:true})
-      table.string('salarioActual', 10).notNullable()
-      table.string('salarioDeseado', 10).notNullable()
-      table.string('localidad', 254).notNullable().unique()
-      table.string('pais', 254).notNullable().unique()
-      table.boolean('remoto').notNullable
-      table.boolena('movilidad'),notNullable()
-      table.integer('userId').unsigned().references('userId').inTable('user')
+      table.string('namefull',100).notNullable()
+      //table.string('email', 254).notNullable().unique()
+      //table.string('telefono', 10).notNullable()
+      //table.date('nacimiento')
+      //table.string('salarioActual', 10).notNullable()
+      //table.string('salarioDeseado', 10).notNullable()
+      //table.string('localidad', 254).notNullable().unique()
+      //table.string('pais', 254).notNullable().unique()
+      //table.boolean('remoto').notNullable
+      //table.boolean('movilidad').notNullable()
+      //table.integer('id').unsigned().references('userId').inTable('user')
       table.timestamps()
     })
   }

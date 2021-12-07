@@ -7,8 +7,8 @@ class ExperienceSchema extends Schema {
   up () {
     this.create('experiences', (table) => {
       table.increments('experienceId')
-      table.integer('candidateId').unsigned().references('candidateId').inTable('candidate')
-      table.integer('skillId').unsigned().references('skillId').inTable('skill')
+      table.integer('candidateId').unsigned().references('candidateId').inTable('candidates')
+      table.integer('skillId').unsigned().references('skillId').inTable('skills')
       table.integer('nivel', 1).notNullable()
 
       table.timestamps()
