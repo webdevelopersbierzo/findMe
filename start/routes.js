@@ -30,7 +30,8 @@ Route.get('/user/:id', 'UserController.show')
 // update
 Route.put('/user/:id', 'UserController.update')
 // Delete
-Route.delete('/user/:id', 'UserController.delete')
+Route.delete('/user/:id', 'UserController.destroy')
+
 
 // ---CRUD CANDIDATOS
 // Create 
