@@ -50,20 +50,12 @@ Route.delete('/candidate/:id','CandidateController.destroy')
 Route.get('/candidates', 'CandidateController.index')
 // CRUD SKILLS
 // Create
-Route.post('/skill',()=>{
-  return {greeting: 'Creando Skill'}
-})
+Route.post('/skill', 'SkillController.store')
 //Read
-Route.get('/skill/:id',()=>{
-  return {greeting: 'Leyendo Skill'}
-})
+Route.get('/skill/:id','SkillController.edit')
 //Update
-Route.put('/skill/:id',()=>{
-  return {greeting: 'Actualizando Skill'}
-})
+Route.put('/skill/:id','SkillController.update')
 //Delete
-Route.delete('/skill/:id',()=>{
-  return {greeting: 'Borrando Skill'}
-})
+Route.delete('/skill/:id','SkillController.delete')
 
 
