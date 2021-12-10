@@ -53,6 +53,6 @@ Route.get('/skill/:id','SkillController.edit')
 //Update
 Route.put('/skill/:id','SkillController.update')
 //Delete
-Route.delete('/skill/:id','SkillController.delete')
+Route.delete('/skill/:id','SkillController.destroy')
 
 
