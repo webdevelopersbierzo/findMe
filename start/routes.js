@@ -39,25 +39,33 @@ Route.delete('/user/:id', ()=>{
 })
 // ---CRUD CANDIDATOS
 // Create 
-Route.post('/candidate',()=>{
-  return {greeting: "Modificando un candidato"}
- })
+Route.post('/candidate', 'CandidateController.store')
 // Read 
-Route.get('/candidate/:id', ()=>{
-  return { greeting: 'Soy el candidato {id}'}
-})
+Route.get('/candidate/:id', 'CandidateController.show')
 // Update 
-Route.put('/candidate/:id',()=>{
-  return {greeting: "Modificando un candidato"}
- })
+Route.put('/candidate/:id','CandidateController.update')
 // Delete 
-Route.delete('/candidate/:id',()=>{
-  return {greeting: "Borrando un candidato"}
- })
+Route.delete('/candidate/:id','CandidateController.destroy')
 /*lista de candidatos*/
 Route.get('/candidates', ()=>{
   return { greeting: 'Hola Listado de candidate'}
 })
-
+// CRUD SKILLS
+// Create
+Route.post('/skill',()=>{
+  return {greeting: 'Creando Skill'}
+})
+//Read
+Route.get('/skill/:id',()=>{
+  return {greeting: 'Leyendo Skill'}
+})
+//Update
+Route.put('/skill/:id',()=>{
+  return {greeting: 'Actualizando Skill'}
+})
+//Delete
+Route.delete('/skill/:id',()=>{
+  return {greeting: 'Borrando Skill'}
+})
 
 
