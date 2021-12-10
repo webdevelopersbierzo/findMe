@@ -17,7 +17,7 @@ class CandidateSchema extends Schema {
       table.string('pais', 254).notNullable().unique()
       table.boolean('remoto').notNullable
       table.boolean('movilidad').notNullable()
-      //table.integer('id').unsigned().references('userId').inTable('users')
+      table.integer('id').unsigned().references('userId').inTable('users')
       table.timestamps()
     })
   }

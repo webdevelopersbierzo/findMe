@@ -6,8 +6,8 @@ const Schema = use('Schema')
 class TokensSchema extends Schema {
   up () {
     this.create('tokens', (table) => {
-      table.increments()
-      table.integer('userId').unsigned().references('userId').inTable('users')
+      table.increments('tokensid')
+      table.integer('Iduser').unsigned().references('userId').inTable('users')
       table.string('token', 255).notNullable().unique().index()
       table.string('type', 80).notNullable()
       table.boolean('is_revoked').defaultTo(false)
