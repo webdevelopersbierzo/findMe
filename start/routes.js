@@ -39,7 +39,7 @@ Route.delete('/user/:id', ()=>{
 })
 // ---CRUD CANDIDATOS
 // Create 
-Route.post('/candidate/:id',()=>{
+Route.post('/candidate',()=>{
   return {greeting: "Modificando un candidato"}
  })
 // Read 
