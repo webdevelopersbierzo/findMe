@@ -1,5 +1,7 @@
 'use strict'
 
+const UserController = require('../app/Controllers/Http/UserController')
+
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -22,21 +24,14 @@ Route.get('/', () => {
 
 /* ----CRUD USER */
 //create
-Route.post('/user', ()=> {
-  return {greeting: "Hola creando un usuario"}
-})
+Route.post('/user', 'UserController.store')
 // Read
-Route.get('/user/:id', ()=> {
-  return {greeting: "Hola comprobando usuario"}
-})
+Route.get('/user/:id', 'UserController.show')
 // update
-Route.put('/user/:id', ()=>{
-  return {greeting: 'Actualizando un usuario'}
-})
+Route.put('/user/:id', 'UserController.update')
 // Delete
-Route.delete('/user/:id', ()=>{
-  return{greeting: 'Borrando un usuario'}
-})
+Route.delete('/user/:id', 'UserController.delete')
+
 // ---CRUD CANDIDATOS
 // Create 
 Route.post('/candidate', 'CandidateController.store')
@@ -48,6 +43,7 @@ Route.put('/candidate/:id','CandidateController.update')
 Route.delete('/candidate/:id','CandidateController.destroy')
 /*lista de candidatos*/
 Route.get('/candidates', 'CandidateController.index')
+
 // CRUD SKILLS
 // Create
 Route.post('/skill', 'SkillController.store')
