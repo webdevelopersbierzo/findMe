@@ -47,9 +47,7 @@ Route.put('/candidate/:id','CandidateController.update')
 // Delete 
 Route.delete('/candidate/:id','CandidateController.destroy')
 /*lista de candidatos*/
-Route.get('/candidates', ()=>{
-  return { greeting: 'Hola Listado de candidate'}
-})
+Route.get('/candidates', 'CandidateController.index')
 // CRUD SKILLS
 // Create
 Route.post('/skill',()=>{
