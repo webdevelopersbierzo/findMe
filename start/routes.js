@@ -21,40 +21,45 @@ const Route = use('Route')
 Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
+Route.resource('/user', 'UserController').apiOnly();
+Route.resource('/candidate', 'CandidateController').apiOnly();
+Route.resource('/skill', 'SkillController').apiOnly();
+Route.resource('experience','ExperienceController').apiOnly();
 
 /* ----CRUD USER */
 //create
-Route.post('/user', 'UserController.store')
+/*
+Route.post('/user', 'UserController.store');
 // Read
-Route.get('/user/:id', 'UserController.show')
+Route.get('/user/:id', 'UserController.show');
 // update
-Route.put('/user/:id', 'UserController.update')
+Route.put('/user/:id', 'UserController.update');
 // Delete
-Route.delete('/user/:id', 'UserController.destroy')
+Route.delete('/user/:id', 'UserController.destroy');
 // Users list
-Route.get('/users','UserController.index')
+Route.get('/users','UserController.index');
 
 
 // ---CRUD CANDIDATOS
 // Create 
-Route.post('/candidate', 'CandidateController.store')
+Route.post('/candidate', 'CandidateController.store');
 // Read 
-Route.get('/candidate/:id', 'CandidateController.show')
+Route.get('/candidate/:id', 'CandidateController.show');
 // Update 
-Route.put('/candidate/:id','CandidateController.update')
+Route.put('/candidate/:id','CandidateController.update');
 // Delete 
-Route.delete('/candidate/:id','CandidateController.destroy')
-/*lista de candidatos*/
-Route.get('/candidates', 'CandidateController.index')
+Route.delete('/candidate/:id','CandidateController.destroy');
+//lista de candidatos
+Route.get('/candidates', 'CandidateController.index');
 
 // CRUD SKILLS
 // Create
-Route.post('/skill', 'SkillController.store')
+Route.post('/skill', 'SkillController.store');
 //Read
-Route.get('/skill/:id','SkillController.edit')
+Route.get('/skill/:id','SkillController.edit');
 //Update
-Route.put('/skill/:id','SkillController.update')
+Route.put('/skill/:id','SkillController.update');
 //Delete
-Route.delete('/skill/:id','SkillController.destroy')
+Route.delete('/skill/:id','SkillController.destroy');
 
-
+*/
