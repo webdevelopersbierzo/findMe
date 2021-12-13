@@ -2,6 +2,7 @@
 
 const UserController = require('../app/Controllers/Http/UserController')
 
+
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -16,10 +17,11 @@ const UserController = require('../app/Controllers/Http/UserController')
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
+
 const Route = use('Route')
 /* pagina principal*/
-Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
+Route.get('/', async({view}) => {
+  return view.render('home')
 })
 
 /* ----CRUD USER */
